@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <meta charset="utf-8"/>
+  <title>Video Conference App</title>
+
+  <link rel="stylesheet" href="https://bootswatch.com/5/superhero/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/css/main.css" />
+  <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+
+</head>
+
+<body>
+
+  <h1 style="padding-top: 15px">Video conference project</h1>
+
+  <div id="videos">
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+  </div>
+
+  <div class="options">
+    <div class="options__left">
+      <div id="stopVideo" class="options__button">
+        <a class="btn btn-primary" ><i class="fa fa-video-camera"></i></a>
+
+      </div>
+      <div id="muteButton" class="options__button">
+        <a class="btn btn-primary" ><i class="fa fa-microphone"></i></a>
+      </div>
+      <div id="showChat" class="options__button">
+        <a class="btn btn-primary" ><i class="fa fa-comment"></i></a>
+      </div>
+    </div>
+    <div class="options__right">
+      <div id="inviteButton" class="options__button">
+        <a class="btn btn-primary" ><i class="fas fa-user-plus"></i></a>
+
+      </div>
+      <div id="roomButton" class="options__button">
+        <a class="btn btn-primary" >room?</a>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
